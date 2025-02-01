@@ -14,10 +14,10 @@ import os
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app)  
 app.config['UPLOAD_FOLDER'] = 'uploads'
 EXTRACTED_IMAGES_FOLDER = 'extracted_images'
-app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB limit
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50mb max file size
 
 # Ensure the upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
