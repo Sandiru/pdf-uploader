@@ -19,7 +19,6 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 EXTRACTED_IMAGES_FOLDER = 'extracted_images'
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50mb max file size
 
-# Ensure the upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(EXTRACTED_IMAGES_FOLDER, exist_ok=True)
 
